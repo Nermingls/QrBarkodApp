@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_app"
+    app:startDestination="@id/mainScreenFragment">
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="dev.nermingules.qrbarkodapp.MainScreenFragment"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_qrFragment2"
+            app:destination="@id/qrFragment2" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_soruFragment2"
+            app:destination="@id/soruFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/qrFragment2"
+        android:name="dev.nermingules.qrbarkodapp.QrFragment"
+        android:label="QrFragment" >
+        <action
+            android:id="@+id/action_qrFragment2_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taramaFragment"
+        android:name="dev.nermingules.qrbarkodapp.TaramaFragment"
+        android:label="TaramaFragment" >
+        <action
+            android:id="@+id/action_taramaFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/soruFragment2"
+        android:name="dev.nermingules.qrbarkodapp.SoruFragment"
+        android:label="fragment_soru"
+        tools:layout="@layout/fragment_soru" >
+        <action
+            android:id="@+id/action_soruFragment2_to_taramaFragment"
+            app:destination="@id/taramaFragment" />
+    </fragment>
+</navigation>

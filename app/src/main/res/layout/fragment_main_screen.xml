@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreenFragment">
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="414dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profilPhoto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="NYSE APPLİCATİON"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="388dp"
+        android:layout_height="601dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navbar"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <TextView
+            android:id="@+id/totalText"
+            android:layout_width="187dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="148dp"
+            android:text="Toplam Tutar : "
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/tarihText"
+            app:layout_constraintHorizontal_bias="0.253"
+            app:layout_constraintStart_toStartOf="@+id/tarihText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="160dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="148dp"
+            android:layout_marginBottom="13dp"
+            android:text="0 : "
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/totalkdv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.936"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fisNoText"
+            android:layout_width="187dp"
+            android:layout_height="51dp"
+            android:text="Fiş No : "
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/totalText"
+            app:layout_constraintEnd_toEndOf="@+id/tarihText"
+            app:layout_constraintHorizontal_bias="0.253"
+            app:layout_constraintStart_toStartOf="@+id/tarihText"
+            app:layout_constraintTop_toBottomOf="@+id/tarihText" />
+
+        <TextView
+            android:id="@+id/fisNo"
+            android:layout_width="160dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="80dp"
+            android:text="0 : "
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/tarih"
+            app:layout_constraintHorizontal_bias="0.936"
+            app:layout_constraintStart_toStartOf="@+id/tarih"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/totalkdvText"
+            android:layout_width="187dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="212dp"
+            android:text="Toplam kdv : "
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/tarihText"
+            app:layout_constraintHorizontal_bias="0.238"
+            app:layout_constraintStart_toStartOf="@+id/tarihText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/totalkdv"
+            android:layout_width="160dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="212dp"
+            android:text="0 : "
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/tarih"
+            app:layout_constraintHorizontal_bias="0.936"
+            app:layout_constraintStart_toStartOf="@+id/tarih"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tarihText"
+            android:layout_width="187dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="16dp"
+            android:text="Tarih : "
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@+id/total"
+            app:layout_constraintHorizontal_bias="0.238"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tarih"
+            android:layout_width="160dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="16dp"
+            android:text="0 : "
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.703"
+            app:layout_constraintStart_toEndOf="@+id/tarihText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/totalkdv"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/totalkdvText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.601" />
+
+        <Button
+            android:id="@+id/qrOkut"
+            android:layout_width="146dp"
+            android:layout_height="91dp"
+            android:layout_marginBottom="60dp"
+            android:text="Qr Okut"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/totalkdvText"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/totalkdvText"
+            app:layout_constraintTop_toTopOf="@+id/barcodOkut"
+            app:layout_constraintVertical_bias="0.855" />
+
+        <Button
+            android:id="@+id/barcodOkut"
+            android:layout_width="146dp"
+            android:layout_height="91dp"
+            android:text="Fiş Tara"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/totalkdv"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/totalkdv"
+            app:layout_constraintTop_toTopOf="@+id/tarih"
+            app:layout_constraintVertical_bias="0.897" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
